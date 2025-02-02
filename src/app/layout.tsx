@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/Shared/Navbar";
 
 const montserrat = Montserrat({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -22,6 +23,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${montserrat.className} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
